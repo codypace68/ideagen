@@ -1,0 +1,155 @@
+body {
+  margin: 0px;
+  overflow: scroll;
+}
+
+div.header-box {
+  display: flex;
+  flex-basis: auto;
+  width: 100vw;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555;
+  border-width: 80%;
+  background: #999;
+  padding: 12px;
+  position: fixed;
+  top: 0px;
+}
+
+div.header {
+  display: flex;
+  order: 1;
+  font-size: 6rem;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  color: #444;
+}
+
+span#save-button {
+  display: none;
+  font-size: 2.7rem;
+  padding: 5px;
+  position: absolute;
+  right: 45px;
+  margin-top: 30px;
+  background: #eeeeee;
+  border-radius: 6px;
+  box-shadow: 2px 2px 1px #1715153b;
+}
+
+select#category-label {
+  font-size: 6rem;
+  background: none;
+  border: none;
+  color: #444;
+  appearance: none;
+}
+
+option.category-option {
+  font-size: 3rem;
+}
+
+div.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-top: 180px;
+}
+
+div.buttons {
+  order: 2;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  
+}
+
+button.get-word {
+  font-size: 3rem;
+  background: #444;
+	color: #fff;
+	border: 1px solid #444;
+	padding: 10px;
+	cursor: pointer;
+	outline: inherit;
+}
+
+select#rando-word {
+  display: none;
+  font-size: 3rem;
+  text-align: center;
+  margin: 10px auto 10px auto;
+}
+
+div.new-entry {
+  display: flex;
+  justify-content: center;
+}
+
+input#input-idea {
+  display: flex;
+  font-size: 3rem;
+  margin-top: 5px;
+}
+
+div#idea-container {
+  width: 95vw;
+  margin: auto;
+  margin-top: 30px;
+  overflow: auto;
+}
+
+table#ideas-table {
+  overflow: auto;
+  width: 100%;
+}
+
+tr.idea, thead.idea {
+  font-size: 3rem;
+}
+
+thead.table-header {
+  font-weight: bold;
+  background: #9999;
+  color: #444;
+}
+
+td.idea-item, th.idea-item, textarea.idea-item {
+  font-size: 3rem;
+  padding: 10px;
+  margin: 0px;
+  border: 1px solid #8080804a;
+}
+
+td.rating-1 {
+  background-color: #ff4545;
+}
+
+td.rating-2 {
+  background-color: #ffa534;
+}
+
+td.rating-3 {
+  background-color: #ffe234;
+}
+
+td.rating-4 {
+  background-color: #b7dd29;
+}
+
+td.rating-5 {
+  background-color: #57e32c;
+}
+
+button.idea-delete {
+  font-size: 3.5rem;
+  background: none;
+	color: #fff;
+	padding: 50px;
+  border: none;
+	cursor: pointer;
+  background-image: url('/images/icons8-delete.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}

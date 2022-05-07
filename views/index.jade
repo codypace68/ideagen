@@ -1,0 +1,65 @@
+extends layout
+
+block content
+  script(src='/javascripts/rando.js')
+  script(src='/javascripts/delete-button.js')
+  script(src='/javascripts/edit-button.js')
+  script(src='/javascripts/add-idea.js')
+  script(src='/javascripts/category-controls.js')
+  script(src='/javascripts/update-ratings.js')
+  script(src='/javascripts/load-word.js')
+  div.header-box
+    div.header#header 
+      span Ideas
+      span#category-dropdown &nbsp;>&nbsp; 
+      select#category-label(data-id='1', name='categories-select') General 
+        each val in categories
+          option.category-option(value=val.dataValues.category, id=val.dataValues.id) #{val.dataValues.category}
+      span#save-button Save Changes
+
+  div.button
+    button.get-word(onclick='words()') Get Random Word
+  .rando-word-container
+    select#rando-word(data-id=0)
+    span#more-info
+  .new-entry 
+      input#input-idea 
+  div#idea-container 
+      table#ideas-table
+        thead.table-header.idea
+          tr
+            th.idea-item#rating-header Rate
+            th.idea-item#word-header Word 
+            th.idea-item#idea-header Idea 
+              svg#edit-button(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='35px' height='35px' viewBox='0 0 583.007 583.006' style='enable-background:new 0 0 583.007 583.006;' xml:space='preserve')
+                g
+                  g
+                    polygon(points='488.409,267.779 316.246,95.602 287.516,124.293 459.713,296.476   ')
+                    polygon(points='341.511,70.858 513.788,243.155 583.007,173.134 410.733,0.823   ')
+                    polygon(points='430.857,323.481 403.753,296.389 151.04,548.061 33.469,548.061 33.469,433.516 287.692,180.334 260.549,153.206     0,412.594 0,582.184 171.106,582.184   ')
+                    polygon(points='121.396,516.848 373.334,265.972 319.12,211.757 67.162,462.629   ')
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+                g
+            th.idea-item#delete-header Dlt
+        tbody#idea-body
+          each val in tableData
+            tr.idea( id= val.dataValues.id data-id=val.dataValues.Word.id )    
+              td.idea-item#idea-rating(class=`idea-rating rating-${val.dataValues.rating}`, data-rating=val.dataValues.rating)
+              td.idea-item.word(onclick='loadWord(event)') #{val.dataValues.Word.word}
+              td.idea-item.idea-description #{val.dataValues.idea}
+              td.idea-item
+                button.idea-delete
+
