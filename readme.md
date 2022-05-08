@@ -1,5 +1,9 @@
 # Random Word Idea Generator
 ---
+
+Live DEMO: https://salty-beach-85003.herokuapp.com/
+
+---
 Some of the most creative people on the planet use random word generators as a source of inspiration. This project takes that idea to the next level by providing you with a plethora of random words and a way to store, categorize, and rate the ideas you come up with based on the word.
 
 ![main app view](./images/main.PNG "Random Idea Gen")
@@ -15,6 +19,8 @@ Using this simple schema allow for new **Categories**, **Words**, and **Ideas** 
 ##### Example:
 
 If you want the app to help with ideas on new YouTube videos, you could add a YouTube category to the **Categories** tables and populate the **Words** table with words related to the types of videos you normaly make.
+
+see [lib/models.js](./lib/models.js) for full DB schema. Sequilize is used as the ORM for this project which enables you to sync with nearly any MySQL DB.
 
 ---
 ## General Functions
