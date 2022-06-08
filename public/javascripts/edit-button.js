@@ -38,7 +38,7 @@ function editMode(e, forceState) {
     } else {
         const ideas = document.getElementsByClassName('idea-description');
         saveBtn.style.display = 'none';
-        
+
 
         for (let i = 0; i < ideas.length; i++) {
             if (prevElemsText[i] !== ideas[i].childNodes[0].value) updateIdeaText(ideas[i].parentElement.id,ideas[i].childNodes[0].value);
@@ -55,7 +55,7 @@ function updateIdeaText(id,text) {
 
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", 'http://192.168.1.14:3000/update-idea/' + id, true);
+    xhr.open("POST", 'http://http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/update-idea/' + id, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
         idea: text

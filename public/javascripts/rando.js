@@ -9,7 +9,7 @@
                   let wordSel = document.getElementById('rando-word');
                   let opt = document.createElement('option');
                   let optText = document.createTextNode(JSON.parse(xhr.response).word);
-        
+
                   opt.appendChild(optText);
                   opt.setAttribute('value', JSON.parse(xhr.response).wordId);
                   wordSel.appendChild(opt);
@@ -24,12 +24,11 @@
                   return resolve(JSON.parse(xhr.response).word);
               } else if (JSON.parse(xhr.response).msg === 'no words in category') {
                 return reject('no word in category');
-              }          
+              }
           }
       }
-      xhr.open("GET", 'http://192.168.1.14:3000/random-word/' + selectedCatId, true);
+      xhr.open("GET", 'http://http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/random-word/' + selectedCatId, true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send();
     })
   }
-  

@@ -32,7 +32,7 @@ function decomIdea(e) {
         }
       }
     }
-    xhr.open("POST", 'http://192.168.1.14:3000/decom-idea/' + e.target.parentElement.parentElement.id, true);
+    xhr.open("POST", 'http://http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/decom-idea/' + e.target.parentElement.parentElement.id, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send();
 }

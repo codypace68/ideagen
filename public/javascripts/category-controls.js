@@ -30,31 +30,31 @@ function changeIdeasToCat() {
                     const elem = document.createElement('tr');
                     elem.id = idea.id;
                     elem.classList = 'idea';
-        
+
                     elem.innerHTML = `
                     <td class="idea-item idea-rating rating-${idea.rating}" id="idea-rating" data-rating=${idea.rating}></td>
                     <td class="idea-item word">${idea.Word.word}</td>
                     <td class="idea-item idea-description">${idea.idea}</td>
                     <td class="idea-item"><button class="idea-delete"></button></td>
                     `;
-        
-        
+
+
                     tableBody.prepend(elem);
-        
-                    addEvents();        
+
+                    addEvents();
                 });
             }
-            
+
             addEvents();
         }
     }
-    xhr.open("GET", 'http://192.168.1.14:3000/ideas-by-category/' + selectedCatId, true);
+    xhr.open("GET", 'http://http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/ideas-by-category/' + selectedCatId, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send();
 }
 
 
-// tr.idea( id= val.dataValues.id )    
+// tr.idea( id= val.dataValues.id )
 // td.idea-item.word #{val.dataValues.word}
 // td.idea-item.idea-description #{val.dataValues.idea}
 // td.idea-item
