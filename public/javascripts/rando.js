@@ -27,7 +27,7 @@
               }
           }
       }
-      xhr.open("GET", 'http://http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/random-word/' + selectedCatId, true);
+      xhr.open("GET", 'http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/random-word/' + selectedCatId, true);
       xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.send();
     })

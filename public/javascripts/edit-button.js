@@ -55,7 +55,7 @@ function updateIdeaText(id,text) {
 
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", 'http://http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/update-idea/' + id, true);
+    xhr.open("POST", 'http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/update-idea/' + id, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({
         idea: text

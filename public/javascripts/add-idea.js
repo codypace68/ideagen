@@ -38,7 +38,7 @@ function eventListenerAdd() {
                 }
                 }
             }
-            xhr.open("POST", 'http://http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/new-idea', true);
+            xhr.open("POST", 'http://ideagen-git-ual-test.apps.ld6-test-cluster-001.mgmt.powercloudx.com/new-idea', true);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(JSON.stringify({
                 word: document.getElementById('rando-word').options[document.getElementById('rando-word').selectedIndex].value,
