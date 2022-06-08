@@ -3,20 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const livereload = require('livereload');
-const connectLiveReload = require('connect-livereload');
+// const livereload = require('livereload');
+// const connectLiveReload = require('connect-livereload');
 const models = require('./lib/models');
 const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-const liveReloadServer = livereload.createServer();
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
-})
+// const liveReloadServer = livereload.createServer();
+// liveReloadServer.server.once("connection", () => {
+//   setTimeout(() => {
+//     liveReloadServer.refresh("/");
+//   }, 100);
+// })
 
 process.on('SIGINT', () => {process.exit()});
 
@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(connectLiveReload());
+// app.use(connectLiveReload());
 app.use(cors());
 
 app.use('/', indexRouter);
