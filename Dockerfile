@@ -7,12 +7,12 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install Dependencies
-RUN npm install
+RUN npm ci
 
 # Bundle app source
 COPY . .
 
-EXPOSE 80
+EXPOSE 3005
 
 # start server
 CMD [ "node", "app.js" ]
