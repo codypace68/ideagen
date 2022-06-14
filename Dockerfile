@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16
 
 # app code stored here
 WORKDIR /usr/src/app
